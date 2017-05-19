@@ -1,0 +1,41 @@
+<ion-view view-title="Adicionar Equipamento">
+  <ion-content>
+
+    
+      
+      <ion-input class="item item-input">
+        <input type="text" placeholder="Nome" ng-model="equipamento.nome">
+      </ion-input>
+
+
+      <ion-input class="item item-input">
+        <textarea rows="3" placeholder="Quantidade" ng-model="equipamento.quantidade"></textarea>
+      </ion-input>
+
+      <div>
+        <ion-item class="item-input item-select">
+          <div class="item-input item-select">
+           Estado Equipamento
+         </div>
+         <select ng-model="equipamento.estado" ng-change="showSelectValue(equipamento.estado)">
+          <option selected>Novo</option>
+          <option>Usado</option>
+        </select>
+      </ion-item>
+    </div>
+
+    <div>
+      <ion-google-place placeholder="Cidade" ng-model="equipamento.cidade" required name="Cidade"/>
+    </div>
+
+
+    <div class="padding">
+      <div class="button-bar">
+        <button class="button button-outline button-assertive" ng-click="delete()" ng-if="equipamento.$id">Delete
+        </button>
+        <button class="button button-positive" ng-click="save()">Save</button>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

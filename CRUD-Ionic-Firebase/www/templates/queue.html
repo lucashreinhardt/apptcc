@@ -1,0 +1,16 @@
+<ion-view  view-title="Equipamentos">
+  <ion-content ng-controller="QueueController">
+    <div class="padding">
+      <button class="button button-block button-balance" ng-click="add()">Adicionar Equipamento</button>
+    </div>
+    <ion-list>
+      <ion-item href="#/edit/{{equipamento.$id}}" ng-repeat="equipamento in queue" class="item-icon-right item-remove-animate">
+        <h2>{{equipamento.nome}}</h2>
+        <p><span am-time-ago="equipamento.updatedTime"></span>: {{equipamento.cidade}}</p>
+
+        <i class="ion-chevron-right icon"></i>
+        <ion-option-button class="button-assertive ion-ios-trash icon-left" ng-click="delete(equipamento)">Delete</ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

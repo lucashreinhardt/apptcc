@@ -1,0 +1,39 @@
+<ion-view view-title="Edit">
+  <ion-content>
+    <div class="card">
+
+      <ion-input class="item item-input">
+      <input type="text" placeholder="Nome" ng-model="pessoa.nome">
+      </ion-input>
+
+      <ion-input class="item item-input">
+      <textarea rows="3" placeholder="Cidade" ng-model="pessoa.cidade"></textarea>
+      </ion-input>
+
+
+      <ion-input class="item item-input">
+      <textarea rows="3" placeholder="Endereço" ng-model="pessoa.endereco"></textarea>
+      </ion-input>
+
+
+      <ion-input class="item item-input">
+      <textarea rows="3" placeholder="Cep" ng-model="pessoa.cep"></textarea>
+      </ion-input>
+
+
+      <ion-input class="item item-input">
+      <textarea rows="3" placeholder="Telefone" ng-model="pessoa.telefone"></textarea>
+      </ion-input>
+
+    </div>
+
+    <div class="padding">
+      <div class="button-bar">
+        <button class="button button-outline button-assertive" ng-click="delete()" ng-if="pessoa.$id">Delete
+</button>
+        <button class="button button-positive" ng-click="save()">Save</button>
+
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
